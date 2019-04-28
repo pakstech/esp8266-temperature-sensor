@@ -49,7 +49,6 @@ void mqtt_connect() {
   client.setServer(mqtt_server, 1883);  
   if (client.connect(client_id)) {
     Serial.println("connected");
-    client.loop();
   } else {
     Serial.print("failed, rc=");
     Serial.print(client.state());
