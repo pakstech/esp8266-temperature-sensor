@@ -72,7 +72,7 @@ void send_temperature(float temperature) {
   Serial.print(" degC");
   Serial.print(" to topic ");
   Serial.println(mqtt_topic);
-  client.publish("home/balcony/temperature", msg);
+  client.publish(mqtt_topic, msg);
   Serial.println("Published");
 }
 
